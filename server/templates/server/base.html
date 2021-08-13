@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c6153d298d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
+    {%block head%}
+    {% endblock %}
+</head>
+
+<body>
+    {%block navbar%}
+
+    {% endblock %}
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <img class="logoCorner1" src="./img/logo_white.png" alt="">
+        <br>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'home' %}">About</a>
+        <a href="{% url 'projects' %}">Projects</a>
+        <a href="{% url 'achievements' %}">Achievements</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </div>
+
+
+    {% block body %}
+    {% endblock %}
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }</script>
+</body>

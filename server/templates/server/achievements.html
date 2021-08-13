@@ -1,0 +1,154 @@
+{% extends "server/base.html" %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<title>DRAIC | Achievements</title>
+{% endblock %}
+
+{% block navbar %}
+<nav>
+    <ul>
+        <li>
+            <div class="nav-box">
+                <a href="{% url 'home' %}">
+                    <center>
+                        <i class="fas fa-home fa-lg"></i>
+                        <label>Home</label>
+                    </center>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="nav-box">
+                <a href="{% url 'home' %}#about">
+                    <center>
+                        <i class="fas fa-info-circle fa-lg"></i>
+                        <label>About</label>
+                    </center>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="nav-box">
+                <a href="{% url 'projects' %}">
+                    <center>
+                        <i class="fas fa-code fa-lg"></i>
+                        <label>Projects</label>
+                    </center>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="nav-box">
+                <a href="{% url 'achievements' %}" class="active">
+                    <center>
+                        <i class="fas fa-trophy"></i>
+                        <label>Achievements</label>
+                    </center>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="nav-box">
+                <a href="{% url 'contact' %}">
+                    <center>
+                        <i class="fas fa-phone-alt fa-lg"></i>
+                        <label>Contact</label>
+                    </center>
+                </a>
+            </div>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+
+{% block body %}
+<!-- <div class="container text-center">
+    <i class="fas fa-bars fa-lg " id="sidebarIcon" style="margin-top: 0.6em;" onclick="openNav()"></i>
+</div> -->
+{% load static %}
+<div class="row">
+    <div class="col-md-2">
+        <!-- <img class="logoCorner" src="{% static 'img/logo_white.png' %}" alt=""> -->
+    </div>
+    <div class="offset-1 text-center">
+        <h2 class="about-heading">Achievements <span style="color: #00A0FF;">2019-20</span></h2>
+    </div>
+
+</div>
+<!-- <hr style="width:50%" /> -->
+
+<div class="container">
+
+    <div class="row row-content">
+
+        <div class="row about-row">
+            <div class="col-12 col-md-5 p-2 align-self-center text-center">
+                <img src="{% static 'img/ach1a.webp' %}" height="80%" width="80%" alt="">
+            </div>
+            <div class=" col-md-1 about-image-right">
+
+            </div>
+            <div class="col-12 col-md-6 about-para">
+                1. Second Runner-up at Innovate for Smart Pimpri Chinchwad, innovation Challenge organised by PCSCL,
+                PCMC & PCCOE, Pune.
+                <br />
+                ​Team Members: Shreyash Choppawar, Amit Prasad, Vedansh Shrivastav
+            </div>
+        </div>
+        <div class="row about-row">
+            <div class="col-12 col-md-5 p-2 align-self-center justify-content-center text-center" id="responsive0">
+                <img src="{% static 'img/ach1b.webp' %}" height="80%" width="80%" alt="">
+            </div>
+            <div class="col-12 col-md-6 about-para">
+                2. First and Second Position at Techtatva Electronics Competition Organised by EnTC Dept, DYPCOE, Pune.
+                <br />
+                ​Team Member: Sagar Warungase, Samiksha Bhokare, Dibyanshu Sharma
+            </div>
+            <div class=" col-md-1 about-image-left">
+
+            </div>
+            <div class="col-12 col-md-5 p-2 align-self-center justify-content-center text-center" id="responsive1">
+                <img src="{% static 'img/ach1b.webp' %}" height="80%" width="80%" alt="">
+            </div>
+
+        </div>
+        <div class="row about-row">
+            <div class="col-12 col-md-5 p-2 align-self-center justify-content-center text-center">
+                <img src="{% static 'img/ach1c.webp' %}" height="80%" width="80%" alt="">
+            </div>
+            <div class=" col-md-1 about-image-right">
+
+            </div>
+            <div class="col-12 col-md-6 about-para">
+                3. Second Runner-up at COEP Mindspark-19 Search & Destroy, organised by COEP, Pune.
+                <br />
+                Team Members: Arvind Patel
+            </div>
+        </div>
+        <div class="row about-row">
+            <div class="col-12 col-md-5 p-2 align-self-center justify-content-center text-center" id="responsive0">
+                <img src="{% static 'img/ach1d.png' %}" height="80%" width="80%" alt="">
+            </div>
+            <div class="col-12 col-md-6 about-para">
+                4. First Position at Bro Code & Code Capture Competition organised by PCCOE, Ravet.
+                <br />
+                ​Team Members: Arvind Patel
+            </div>
+            <div class=" col-md-1 about-image-left">
+
+            </div>
+            <div class="col-12 col-md-5 p-2 align-self-center justify-content-center text-center" id="responsive1">
+                <img src="{% static 'img/ach1d.png' %}" height="80%" width="80%" alt="">
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+{% endblock %}
